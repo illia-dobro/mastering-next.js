@@ -1,10 +1,12 @@
-import { Link } from "./common/components";
+import Link from "next/link";
+import ProductCard from "./components/product-card";
 
 export default function Home() {
   return (
     <main>
       <h1>Hello world</h1>
       <Link href="/users">Users</Link>
+      <ProductCard />
     </main>
   )
 }
