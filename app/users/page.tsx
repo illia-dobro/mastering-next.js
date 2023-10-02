@@ -3,6 +3,7 @@ import React from 'react';
 type User = {
   id: number;
   name: string;
+  email: string
 };
 
 const UsersPage = async () => {
@@ -14,11 +15,19 @@ const UsersPage = async () => {
   return (
     <>
       <div>UsersPage</div>
-      <ul>
+      <table className='table table-bordered'>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
         {users.map((user) => (
-          <li key={user.id}>{user.name}</li>
+          <tr key={user.id}><td>{user.name}</td><td>{user.email}</td></tr>
         ))}
-      </ul>
+        </tbody>
+      </table>
     </>
   );
 };
