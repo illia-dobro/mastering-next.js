@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { json } from 'stream/consumers';
-
-
+import { schema } from '../schema';
 
 export function GET(request: NextRequest, { params }: { params: {id: number} } ) {
   if(params.id > 10) {
