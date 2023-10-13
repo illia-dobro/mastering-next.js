@@ -2,7 +2,7 @@ import IssueStatusBadge from '@/app/components/issue-status-badge';
 import prisma from '@/prisma/client';
 import { Card, Flex, Heading, Text } from '@radix-ui/themes';
 import { notFound } from 'next/navigation';
-import Markdown from 'react-markdown'
+import Markdown from 'react-markdown';
 
 interface Props {
   params: { id: string };
